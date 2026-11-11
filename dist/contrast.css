@@ -1,0 +1,64 @@
+/* Three visible information levels, shared by both glass themes. */
+:root[data-theme="light"]{--text-main:#193b49;--text-label:#405e6b;--text-note:#5b7381;--ui-border:#9bb8c6;--ui-surface:rgba(255,255,255,.78);--ui-active:#287d84;--ui-active-text:#ffffff;--ui-disabled:#889aa5;--glass:linear-gradient(130deg,rgba(255,255,255,.89),rgba(245,250,252,.83))}
+:root[data-theme="dark"]{--text-main:#f1faff;--text-label:#c3d8e1;--text-note:#96afbc;--ui-border:#638b9b;--ui-surface:rgba(34,68,82,.40);--ui-active:#86d2c5;--ui-active-text:#12333c;--ui-disabled:#738c99}
+:root[data-theme] body{color:var(--text-label)}
+:root[data-theme] .sectionhead,:root[data-theme] .left .sectionhead,:root[data-theme] .right .sectionhead,:root[data-theme] .walk-section-title{color:var(--text-main);font-weight:600;letter-spacing:.4px;font-size:14px}
+:root[data-theme] .big>span,:root[data-theme] .weather b,:root[data-theme] .stats b,:root[data-theme] .ring b,:root[data-theme] .energy b,:root[data-theme] #detail h2,:root[data-theme] .spatial-head h2,:root[data-theme] .room-title h3,:root[data-theme] .walk-dest b,:root[data-theme] .walk-top h2,:root[data-theme] .ops-primary h3{color:var(--text-main);font-weight:600}
+:root[data-theme] .stats .online-stat b{font-weight:600}
+:root[data-theme] .big label,:root[data-theme] .env,:root[data-theme] .legend,:root[data-theme] .device b,:root[data-theme] #buildings button,:root[data-theme] .detail-tabs button,:root[data-theme] .space-select label,:root[data-theme] .subheading,:root[data-theme] .room-environment span,:root[data-theme] .equipment-top b,:root[data-theme] .equipment-bottom,:root[data-theme] .filter-row,:root[data-theme] .spatial-breadcrumb button,:root[data-theme] .spatial-equipment>button,:root[data-theme] .walk-selects label,:root[data-theme] .walk-settings label,:root[data-theme] .walk-devices button,:root[data-theme] .walk-device-detail>b,:root[data-theme] .tour-top b,:root[data-theme] .tour-copy b{color:var(--text-label);font-weight:500}
+:root[data-theme] .brand small,:root[data-theme] .sectionhead small,:root[data-theme] .metric-note,:root[data-theme] .stats span,:root[data-theme] .stats small,:root[data-theme] .weather p,:root[data-theme] .weather b small,:root[data-theme] .weather label,:root[data-theme] .env small,:root[data-theme] .legend>small,:root[data-theme] .device small,:root[data-theme] .device-summary label small,:root[data-theme] #buildings small,:root[data-theme] .ring span,:root[data-theme] .energy small,:root[data-theme] .chart>div,:root[data-theme] .chart>span,:root[data-theme] .eyebrow,:root[data-theme] .detail-summary,:root[data-theme] .detail-foot,:root[data-theme] .room-title>small,:root[data-theme] .minor-line,:root[data-theme] .minor-line span,:root[data-theme] .equipment-top small,:root[data-theme] .subheading small,:root[data-theme] .spatial-footer,:root[data-theme] .sample-note,:root[data-theme] .plan-layerbar>span,:root[data-theme] .plan-legend,:root[data-theme] .plan-legend>small,:root[data-theme] .spatial-equipment small,:root[data-theme] .spatial-metrics span,:root[data-theme] .spatial-metrics small,:root[data-theme] .tour-select-row label,:root[data-theme] .tour-select-row>span,:root[data-theme] .tour-intro,:root[data-theme] .tour-copy p,:root[data-theme] .walk-note,:root[data-theme] .walk-section-title small,:root[data-theme] .walk-values span,:root[data-theme] .walk-values small,:root[data-theme] .walk-devices small,:root[data-theme] .walk-device-detail>small,:root[data-theme] .walk-device-detail>span,:root[data-theme] .walk-route p,:root[data-theme] .walk-route>small,:root[data-theme] .walk-floor-map>small,:root[data-theme] .bottom>div:first-child,:root[data-theme] .bottom>span{color:var(--text-note);font-weight:400}
+:root[data-theme] .metric-note,:root[data-theme] .stats span,:root[data-theme] .env,:root[data-theme] .device-summary label small,:root[data-theme] .detail-summary,:root[data-theme] .room-title>small,:root[data-theme] .minor-line,:root[data-theme] .spatial-footer,:root[data-theme] .walk-note{font-size:10px;line-height:1.6}
+:root[data-theme] .sectionhead small,:root[data-theme] .device small,:root[data-theme] .eyebrow{font-size:9px;letter-spacing:.7px}
+:root[data-theme] .device b,:root[data-theme] #buildings button,:root[data-theme] .equipment-top b{font-size:12px}
+:root[data-theme] .device strong,:root[data-theme] .legend b,:root[data-theme] .room-environment b,:root[data-theme] .spatial-metrics b,:root[data-theme] .walk-values b{font-weight:600}
+/* Buttons are recognizable surfaces; primary actions form a distinct layer. */
+:root[data-theme] button{font-weight:500}
+:root[data-theme] .tools button,:root[data-theme] header .topright #themeToggle,:root[data-theme] .equipment-bottom button,:root[data-theme] .filter-row button,:root[data-theme] .alarm-actions button,:root[data-theme] .tour-actions button,:root[data-theme] .floor-switch button,:root[data-theme] .expand-button,:root[data-theme] .plan-layerbar button,:root[data-theme] .spatial-view-tools button,:root[data-theme] .spatial-equipment>button,:root[data-theme] .walk-top button,:root[data-theme] .walk-route button,:root[data-theme] .walk-move button,:root[data-theme] .walk-section-title>button,:root[data-theme] .walk-devices button,:root[data-theme] .walk-device-detail>button{color:var(--text-label);background:var(--ui-surface);border-color:var(--ui-border);font-weight:500}
+:root[data-theme] #tourLauncher,:root[data-theme] #startTour,:root[data-theme] #playTour,:root[data-theme] #ackAlert,:root[data-theme] #recoverAlert,:root[data-theme] #enterIndoor,:root[data-theme] #spatialBusiness,:root[data-theme] #walkToggle,:root[data-theme] #walkRouteStart{background:var(--ui-active);color:var(--ui-active-text);border-color:var(--ui-active);font-weight:600;box-shadow:0 3px 10px #1d68751a}
+:root[data-theme] .filter-row button.active,:root[data-theme] .floor-switch button.active,:root[data-theme] .plan-layerbar button.active{background:var(--ui-active);color:var(--ui-active-text);border-color:var(--ui-active);font-weight:600}
+:root[data-theme] .detail-tabs button.active{color:var(--text-main);font-weight:600;border-bottom-width:3px}
+:root[data-theme] .space-select select,:root[data-theme] .tour-select-row select,:root[data-theme] .walk-selects select,:root[data-theme] .walk-settings select{border-color:var(--ui-border);color:var(--text-label);font-weight:500}
+:root[data-theme] button:disabled{opacity:1!important;cursor:not-allowed;box-shadow:none!important}
+:root[data-theme="light"] button:disabled{color:#8797a0!important;border-color:#cedbe1!important;background:#edf2f5c9!important}
+:root[data-theme="dark"] button:disabled{color:#6e8997!important;border-color:#36515e!important;background:#1b3540b3!important}
+:root[data-theme] button:focus-visible,:root[data-theme] select:focus-visible{outline:2px solid var(--ui-active);outline-offset:3px}
+/* A stronger status hierarchy without turning every item into an alert. */
+:root[data-theme] .alert .alert-type{font-size:11px;font-weight:600}
+:root[data-theme] .alert b{font-size:13px;font-weight:600}
+:root[data-theme] .alert small strong{font-weight:600}
+:root[data-theme="light"] .alert{background:linear-gradient(110deg,#f6e9cd94,#fff8e852);border-color:#d3b87b88;border-left-color:#af843a}
+:root[data-theme="light"] .alert .alert-type,:root[data-theme="light"] .alert small strong,:root[data-theme="light"] .alert .locate{color:#835b20}
+:root[data-theme="light"] .alert b{color:#594a30}
+:root[data-theme="light"] .alert small,:root[data-theme="light"] .alert .alert-desc,:root[data-theme="light"] .alert time{color:#7b6c51}
+:root[data-theme="light"] .alert.amber{background:#e7f0eb70;border-color:#adc7b988;border-left-color:#648c7d}
+:root[data-theme="light"] .alert.amber .alert-type,:root[data-theme="light"] .alert.amber b,:root[data-theme="light"] .alert.amber .locate{color:#3f695b}
+:root[data-theme="light"] .alert.amber small,:root[data-theme="light"] .alert.amber time{color:#5c786d}
+:root[data-theme="light"] .count,:root[data-theme="light"] .state-chip.warning,:root[data-theme="light"] .warn-text,:root[data-theme="light"] .ops-primary>strong,:root[data-theme="light"] .room-environment .hot b,:root[data-theme="light"] .room-environment .hot em,:root[data-theme="light"] .spatial-metrics b.warn-text,:root[data-theme="light"] .walk-values .warn-text{color:#895e21;font-weight:600}
+:root[data-theme="dark"] .count,:root[data-theme="dark"] .state-chip.warning,:root[data-theme="dark"] .warn-text,:root[data-theme="dark"] .ops-primary>strong,:root[data-theme="dark"] .walk-values .warn-text{color:#f6cb8a;font-weight:600}
+:root[data-theme="light"] .state-chip:not(.warning):not(.idle){color:#347368;border-color:#91bcb366;background:#dfefea80}
+:root[data-theme="dark"] .state-chip:not(.warning):not(.idle){color:#b4ead7;border-color:#85bea457;background:#6db5961a}
+:root[data-theme="light"] .ops-header,:root[data-theme="light"] .ops-primary p,:root[data-theme="light"] .rule-note p,:root[data-theme="light"] .intelligence-note span,:root[data-theme="light"] .alarm-link,:root[data-theme="light"] .event-timeline li,:root[data-theme="light"] .event-timeline time{color:#526e7b!important}
+:root[data-theme="dark"] .ops-header,:root[data-theme="dark"] .ops-primary p,:root[data-theme="dark"] .rule-note p,:root[data-theme="dark"] .intelligence-note span,:root[data-theme="dark"] .alarm-link,:root[data-theme="dark"] .event-timeline li,:root[data-theme="dark"] .event-timeline time{color:#b5ced9!important}
+:root[data-theme="light"] .floor-plan [data-plan-room]>text:first-of-type{fill:#294c5a;font-weight:600}
+:root[data-theme="light"] .floor-plan [data-plan-room]>text:not(:first-of-type){fill:#5f7884}
+:root[data-theme="light"] .floor-plan [data-plan-room][aria-label*="异常"]>text:first-of-type{fill:#8c5f22}
+:root[data-theme="light"] .floor-plan [data-plan-device] text{fill:#245d66;font-weight:500}
+:root[data-theme="dark"] .floor-plan [data-plan-room]>text:first-of-type{fill:#eaf8fc;font-weight:600}
+:root[data-theme="dark"] .floor-plan [data-plan-room]>text:not(:first-of-type){fill:#b1cfd9}
+:root[data-theme="dark"] .floor-plan [data-plan-room][aria-label*="异常"]>text:first-of-type{fill:#f4cb8a}
+:root[data-theme="light"] .ops-chart polyline{stroke:#367e7b;stroke-width:2.2}
+:root[data-theme="light"] .ops-chart text,:root[data-theme="light"] .walk-floor-map svg text{fill:#607b87}
+:root[data-theme="dark"] .walk-floor-map svg text{fill:#b7d2dc}
+@media(max-width:950px){:root[data-theme] .sectionhead,:root[data-theme] .left .sectionhead,:root[data-theme] .right .sectionhead{font-size:13px}:root[data-theme] .sectionhead small{font-size:8px}}
+:root[data-theme] .label,:root[data-theme] .walk-hint{color:var(--text-label);font-weight:500}
+:root[data-theme] .rule-note small,:root[data-theme] .alarm-link small,:root[data-theme] .tour-top small,:root[data-theme] .tour-actions #resetTour{color:var(--text-note)!important}
+:root[data-theme="light"] .ops-primary>strong.good-text{color:#347e6d}
+:root[data-theme="dark"] .ops-primary>strong.good-text{color:#a6e5ca}
+:root[data-theme="light"] .alert.resolved{background:#e8f3ed80;border-left-color:#709e89}
+:root[data-theme="light"] .alert.resolved .alert-type,:root[data-theme="light"] .alert.resolved .locate{color:#477d6b}
+:root[data-theme="dark"] .alert.resolved .alert-type,:root[data-theme="dark"] .alert.resolved .locate{color:#a7ddc8}
+:root[data-theme="dark"] .left section,:root[data-theme="dark"] .right section,:root[data-theme="dark"] #detail,:root[data-theme="dark"] #spatialPanel,:root[data-theme="dark"] #tourPanel,:root[data-theme="dark"] .walk-info,:root[data-theme="dark"] .walk-route,:root[data-theme="dark"] .walk-floor-map{background:linear-gradient(130deg,rgba(15,39,51,.88),rgba(9,31,44,.83));border-top-color:#c4e6de66;box-shadow:inset 0 1px 0 #d8f4ee13,0 14px 36px #00121933}
+:root[data-theme] .scene-status{color:var(--text-label)}
+:root[data-theme] .scene-status>span{color:var(--text-note)}
+:root[data-theme="light"] .title p{color:#496575;text-shadow:0 1px 7px #ffffffb3}
+:root[data-theme="dark"] .title p{color:#bad3dd}
